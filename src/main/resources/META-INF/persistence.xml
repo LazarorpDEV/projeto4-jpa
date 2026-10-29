@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2"><persistence-unit name="Projeto4" transaction-type="RESOURCE_LOCAL">
+ <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider><class>br.com.rpires.domain.jpa.ClienteJpa</class>
+<class>br.com.rpires.domain.jpa.ProdutoJpa</class>
+<class>br.com.rpires.domain.jpa.ProdutoQuantidadeJpa</class>
+<class>br.com.rpires.domain.jpa.VendaJpa</class>
+<exclude-unlisted-classes>true</exclude-unlisted-classes><properties>
+ <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+ <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./data/projeto4"/>
+ <property name="javax.persistence.jdbc.user" value="sa"/>
+ <property name="javax.persistence.jdbc.password" value=""/>
+ <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+ <property name="hibernate.hbm2ddl.auto" value="update"/>
+ <property name="hibernate.show_sql" value="false"/>
+ </properties></persistence-unit><persistence-unit name="Projeto4Teste" transaction-type="RESOURCE_LOCAL">
+ <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider><class>br.com.rpires.domain.jpa.ClienteJpa</class>
+<class>br.com.rpires.domain.jpa.ProdutoJpa</class>
+<class>br.com.rpires.domain.jpa.ProdutoQuantidadeJpa</class>
+<class>br.com.rpires.domain.jpa.VendaJpa</class>
+<exclude-unlisted-classes>true</exclude-unlisted-classes><properties>
+ <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+ <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:projeto4teste;DB_CLOSE_DELAY=-1"/>
+ <property name="javax.persistence.jdbc.user" value="sa"/>
+ <property name="javax.persistence.jdbc.password" value=""/>
+ <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+ <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+ <property name="hibernate.show_sql" value="false"/>
+ </properties></persistence-unit></persistence>

@@ -1,0 +1,19 @@
+Validação realizada em 29/10/2026
+Ambiente: Java 17, Maven 3.9.9, Hibernate 5.6.15.Final, H2 2.2.224.
+
+mvn clean test
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
+
+mvn exec:java
+Venda salva no banco: 1
+Cliente: Cliente demonstração
+Quantidade: 2
+Total: R$ 51.00 | Status: CONCLUIDA
+BUILD SUCCESS
+
+Banco H2 em arquivo reaberto em processo separado: as quatro tabelas
+e a consulta com JOIN de consultas.sql retornaram os registros gravados.
+
+PostgreSQL: configuração opcional disponível; não executada neste ambiente.
+O ZIP contém somente fontes/configuração/documentação; target e data foram excluídos.
